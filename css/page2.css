@@ -1,0 +1,41 @@
+#test1 {
+  width: 100px;
+  height: 100px;
+}
+
+#test1--body {
+  height: 50px;
+  background-color: red;
+  margin-bottom: 20px;
+}
+
+#test2 {
+  width: 100px;
+}
+
+#test2--body {
+  height: 50px;
+  background-color: blue;
+}
+
+.program--container > header {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.program--section--now > .list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.program--section > .column--list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.program--section > .row--list {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+}
+
+/*# sourceMappingURL=page2.css.map */
