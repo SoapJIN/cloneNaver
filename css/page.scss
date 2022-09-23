@@ -1,0 +1,79 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "elements/button";
+@import "elements/logo";
+@import "elements/menu";
+
+@import "extends/response";
+
+@import "extends/bundle/pagination";
+@import "extends/bundle/x_scroll";
+@import "extends/bundle/home_side";
+@import "extends/bundle/search";
+@import "extends/bundle/shortcut";
+@import "extends/bundle/scroll";
+@import "extends/bundle/pagination";
+@import "extends/bundle/virus";
+@import "extends/bundle/weather";
+@import "extends/bundle/carousel";
+@import "extends/bundle/program";
+@import "extends/bundle/ad";
+@import "extends/bundle/stock";
+@import "extends/bundle/reco";
+@import "extends/bundle/nav";
+
+
+@import "media/desktop";
+@import "media/tablet";
+
+body {
+  i {
+    color: $icon-color;
+  }
+
+  button {
+    background-color: transparent;
+  }
+
+  a {
+    color: black;
+  }
+}
+
+
+.border__left {
+  border-left: 0.1rem solid #f0f0f0;
+}
+
+
+.event-link--bottom {
+  display: none;
+}
+
+
+.menu--fixed {
+  position: fixed;
+  transform: translateX(0%);
+  top: 0;
+  z-index: 4;
+}
+
+
+
+
+@include respond-between(break-320,break-600){
+  .section__naver-banner {
+    display: none;
+  }
+}
+
+@include respond-between(break-320,break-993){
+  .desktop-version {
+    display: none;
+  }
+}
+
+
+
+

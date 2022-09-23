@@ -1,0 +1,1185 @@
+@charset "UTF-8";
+button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination__list .pagination__item {
+  display: flex;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.pagination__list .pagination__item .pagination__button :hover {
+  font-size: 1rem;
+  color: #333333;
+}
+.pagination__list .pagination__item .pagination__button > i {
+  font-size: 0.7rem;
+  color: #aaaaaa;
+}
+
+.x-scroll__container {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.x-scroll__container__search-and-shortcut {
+  padding: 6rem 1.5rem;
+}
+
+.x-scroll__container__item {
+  scroll-snap-align: center;
+}
+.x-scroll__container__item--news {
+  margin-top: 57px;
+  font-size: 2rem;
+  background-color: #1d80bc;
+}
+.x-scroll__container__item--ent {
+  margin-top: 57px;
+  font-size: 2rem;
+  background-color: #5b58ee;
+}
+
+.home-side__container {
+  padding: 0 1.5rem;
+  position: fixed;
+  z-index: 4;
+  transform: translateX(-100%);
+  max-height: 100vh;
+  min-width: 100vw;
+  overflow-y: auto;
+  transition: all 1.5s;
+  font-size: 15px;
+  background-color: white;
+}
+
+.home-side__header {
+  padding: 10px 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-side__header__title {
+  font-size: 25px;
+  font-weight: bold;
+}
+.home-side__header__link-with-button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.home-side__header__link-with-button > a > p {
+  font-weight: bold;
+}
+
+.home-side__button--close > i {
+  font-size: 18px;
+}
+
+.home-side__shortcut__container {
+  margin-bottom: 40px;
+}
+.home-side__shortcut__container .shortcut {
+  display: unset;
+}
+
+.home-side__title__container {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-side__title__container .home-side__title__txt {
+  font-size: 18px;
+  font-weight: bold;
+}
+.home-side__title__container .home-side__title__set {
+  display: flex;
+}
+.home-side__title__container .ai__button:before {
+  margin: 0 10px;
+  content: " ";
+  border-left: 0.1px solid #aaaaaa;
+}
+.home-side__title__container .order-change__button:before {
+  margin: 0 10px;
+  content: " ";
+  border-left: 0.1px solid #aaaaaa;
+}
+
+.section__service {
+  margin-bottom: 15px;
+}
+
+.service__title {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px 15px;
+  font-size: 15px;
+  background-color: #aaaaaa;
+}
+
+.service__list {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  box-shadow: 1px 0.5px 3px #e0e0e0;
+}
+
+.service__list--row {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px;
+  display: grid;
+  grid-gap: 10px;
+  box-shadow: 1px 0.5px 3px #e0e0e0;
+}
+
+.service__item {
+  display: flex;
+  justify-content: space-between;
+}
+.service__item .service__link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.service__item .service__link > i {
+  border-radius: 30%;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  background-color: #aaaaaa;
+}
+.service__item .service__bookmark-button > i {
+  color: #cccccc;
+  font-size: 20px;
+}
+
+.search {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 18.75px 1fr 18.75px;
+  grid-gap: 1rem;
+}
+.search__input {
+  border: 0 none;
+  padding: 1.5rem 0 1.5rem 0.3rem;
+  font-size: 15px;
+}
+.search__input:focus {
+  outline: none;
+}
+.search__mic-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: Transparent;
+}
+
+.home__search {
+  margin: 0 auto 2rem;
+  border: 0.1rem solid #000000;
+  border-radius: 10rem;
+  box-shadow: 0.2rem 0.5rem 0.5rem #e0e0e0;
+  max-width: 480px;
+  background-color: white;
+}
+
+.search__container--float {
+  height: 61px;
+  background-color: white;
+}
+
+.shortcut {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.shortcut__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: center;
+  justify-items: center;
+}
+.shortcut__item {
+  margin: 1rem 1rem;
+}
+.shortcut__link {
+  display: flex;
+  flex-direction: column;
+  width: 48px;
+}
+.shortcut__link i {
+  margin-bottom: 5px;
+  border-radius: 30%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 5px 20px #e0e0e0;
+  background-color: white;
+}
+.shortcut__link > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.scroll__list--column {
+  padding: 0 15px 10px;
+  display: grid;
+  grid-template-columns: repeat(20, 100px);
+  grid-gap: 10px;
+  overflow-x: scroll;
+}
+.scroll__item--now-pairing > .scroll__link {
+  height: 140px;
+  border-radius: 10px;
+  background-color: #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 13px;
+}
+.scroll__link {
+  position: relative;
+  display: grid;
+  grid-template-rows: 140px 1fr;
+}
+.scroll__link > .text-live {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 0;
+  left: 10px;
+  top: 10px;
+  height: 15px;
+  width: 30px;
+  font-size: 10px;
+  background-color: red;
+  color: white;
+}
+.scroll__link > .text-day {
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 0;
+  left: 10px;
+  top: 10px;
+  height: 15px;
+  width: 30px;
+  font-size: 10px;
+  background-color: blue;
+  color: white;
+}
+.scroll__link > img {
+  height: 140px;
+  width: 100px;
+  border-radius: 10px;
+  object-position: center;
+  object-fit: cover;
+}
+.scroll__link > p {
+  text-overflow: ellipsis;
+  height: 30px;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5em;
+  height: 3em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+
+.link__button {
+  margin: 0 1.5rem;
+  border-radius: 2rem;
+  padding: 1rem 1rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: #f5f5f5;
+}
+.link__button > img {
+  margin-right: 0.5rem;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  object-fit: cover;
+  object-position: center;
+  background-color: #333333;
+  box-shadow: 0.1rem 0.2rem #aaaaaa;
+}
+.link__button > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5em;
+  height: 1.5em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination__list .pagination__item {
+  display: flex;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.pagination__list .pagination__item .pagination__button :hover {
+  font-size: 1rem;
+  color: #333333;
+}
+.pagination__list .pagination__item .pagination__button > i {
+  font-size: 0.7rem;
+  color: #aaaaaa;
+}
+
+.virus {
+  background-color: white;
+  padding: 1.5rem;
+}
+.virus__header {
+  font-size: 1.8rem;
+}
+.virus__list {
+  padding: 1rem 1rem 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.virus__item--02, .virus__item--03 {
+  border-left: 0.1rem solid #f5f5f5;
+  padding-left: 1rem;
+}
+.virus__link {
+  display: block;
+}
+.virus__link > p {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+.virus__link > b {
+  font-size: 1.8rem;
+}
+.virus__chart {
+  border: 0.1rem solid #aaaaaa;
+}
+.virus__chart__link {
+  display: block;
+  height: 10rem;
+}
+
+.virus-info {
+  grid-area: virus-info;
+  background-color: #f5f5f5;
+}
+.virus-info__list {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.virus-info__link {
+  display: grid;
+  grid-template-rows: 25px 1fr;
+  grid-gap: 0.5rem;
+  justify-items: center;
+  font-size: 12px;
+}
+
+.weather__container {
+  grid-area: weather;
+  margin-bottom: 1rem;
+  padding: 2rem 1.5rem;
+  background-color: white;
+}
+.weather__container .weather__link {
+  display: grid;
+  grid-template-columns: 40px 50% 1fr;
+  align-items: center;
+  grid-gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.weather__container .weather__link > i {
+  font-size: 3rem;
+}
+.weather__container .weather__link--middle b {
+  font-size: 1.8rem;
+}
+.weather__container .weather__link--middle > p {
+  font-size: 1.2rem;
+}
+.weather__container .weather__link--right {
+  display: grid;
+  grid-template-columns: 1fr 25px;
+  align-items: center;
+  justify-items: end;
+  grid-gap: 0.5rem;
+}
+.weather__container .weather__link--right > p {
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5em;
+  height: 1.5em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+.weather__container .weather-info__list--column {
+  padding-bottom: 2rem;
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.weather__container .weather-info__link {
+  margin-right: 0.5rem;
+  border-radius: 4rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-color: #333333;
+}
+.weather__container .weather-info__link > p {
+  color: white;
+}
+.weather__container .weather-chart__link {
+  display: grid;
+  grid-template-rows: 90% 1fr;
+  grid-gap: 1rem;
+  font-size: 1.3rem;
+}
+.weather__container .weather-chart__link > p {
+  padding: 1rem 0;
+}
+.weather__container .weather-chart__box--01 {
+  border: 0.1rem solid #e0e0e0;
+  border-bottom: 0.1rem solid black;
+  height: 11rem;
+}
+.weather__container .weather-chart__box--02 {
+  display: flex;
+  align-items: center;
+}
+.weather__container .weather-chart__box--02 > i {
+  font-size: 1.5rem;
+  margin-left: 0.3rem;
+}
+
+.carousel__container {
+  grid-area: carousel;
+  background-color: white;
+  padding: 1.5rem;
+}
+.carousel__container .carousel__header {
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.carousel__container .carousel__header > b {
+  font-size: 1.7rem;
+}
+.carousel__container .carousel__header--right .link {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.carousel__container .carousel__header--right .link > p {
+  font-size: 1.4rem;
+  margin-right: 0.2rem;
+}
+.carousel__container .carousel__header--right .link > i {
+  font-size: 1.5rem;
+}
+.carousel__container .carousel__list {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  font-size: 0;
+}
+.carousel__container .carousel__item {
+  display: inline-block;
+  width: 100%;
+  padding: 0 0.5rem 1rem 0.5rem;
+  scroll-snap-align: center;
+}
+.carousel__container .carousel__link {
+  border: 0.1rem solid #efefef;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+.carousel__container .carousel__link > img {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.carousel__container .carousel__link .ca-01 {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  grid-gap: 1rem;
+}
+.carousel__container .carousel__link .ca-01 > i {
+  border: 1px solid #efefef;
+  border-radius: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.carousel__container .carousel__link .ca-01__sub {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.carousel__container .carousel__link .ca-01__sub .text--01 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 2rem;
+  font-size: 1.7rem;
+}
+.carousel__container .carousel__link .ca-01__sub .text--02 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+
+.now__container {
+  grid-area: now;
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  background-color: white;
+}
+
+.live__container {
+  grid-area: live;
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  background-color: white;
+}
+
+.live {
+  padding: 0 1.5rem;
+}
+.live__list--row {
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+.live__link {
+  display: grid;
+  grid-template-columns: 90px 1fr 34px;
+  grid-gap: 10px;
+  align-items: center;
+}
+.live__link > img {
+  border-radius: 5px;
+  height: 90px;
+  width: 90px;
+  object-position: center;
+  object-fit: cover;
+}
+.live__link > i {
+  border: 0.1rem solid black;
+  border-radius: 10rem;
+  padding: 7px 8px;
+  font-size: 18px;
+  color: #333333;
+}
+.live-info__box > p:nth-child(1) {
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5em;
+  height: 3em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+.live-info__box > p:nth-child(2) {
+  font-size: 1.2rem;
+  color: #1d80bc;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5em;
+  height: 1.5em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+.live-info__box__performer {
+  display: flex;
+}
+.live-info__box__performer > img {
+  margin-right: 0.5rem;
+  border: 0.1rem solid #cccccc;
+  border-radius: 1rem;
+  height: 2.1rem;
+  width: 2.1rem;
+}
+.live-info__box__performer > b {
+  font-size: 1.3rem;
+  color: dimgrey;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5em;
+  height: 1.5em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+
+.program__header {
+  padding: 2rem 1.5rem;
+  font-size: 1.4rem;
+}
+.program__header__link--title {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.program__header__link--pairing > i {
+  margin-right: 0.3rem;
+  font-size: 1.5rem;
+}
+
+.ad__container--01 .ad__link {
+  display: flex;
+  justify-content: center;
+}
+.ad__container--01 .ad__link img {
+  box-shadow: 0.2rem 0.5rem 2rem #e0e0e0;
+  border-radius: 1rem 1rem 0 0;
+  height: 11rem;
+  width: 32rem;
+  object-position: center;
+  object-fit: cover;
+}
+
+.ad__container--02 {
+  grid-area: ad;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+}
+.ad__container--02 .ad__link > img {
+  margin-right: 1rem;
+  height: 8rem;
+  object-position: right;
+  object-fit: contain;
+}
+.ad__container--02 .ad__x-button > i {
+  font-size: 1.2rem;
+}
+
+.naver-app-ad {
+  grid-area: naver-app-ad;
+  margin: 1rem 0;
+  padding: 2rem 1.5rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.naver-app-ad__link {
+  display: grid;
+  grid-template-columns: 40px 1fr 99px;
+  grid-gap: 1rem;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.naver-app-ad__link > i {
+  border-radius: 1.6rem;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #1d80bc;
+}
+.naver-app-ad__texts {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 2rem;
+  height: 4rem; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+  font-size: 1.5rem;
+}
+.naver-app-ad__more {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.naver-app-ad__more > i {
+  margin-left: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.stock__container {
+  grid-area: stock;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+.stock__container .stock__list {
+  padding: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2rem;
+  overflow-x: scroll;
+}
+.stock__container .stock__list .stock__item {
+  padding: 0 2rem 0 1.5rem;
+}
+.stock__container .stock__list .stock__link {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+.stock__container .stock__list .stock__link .stock__title {
+  font-size: 1.4rem;
+}
+.stock__container .stock__list .stock__link .stock__price {
+  font-size: 1.8rem;
+}
+.stock__container .stock__list .stock__link .stock__gab {
+  display: flex;
+}
+.stock__container .stock__list .stock__link .stock__gab > i {
+  font-size: 1rem;
+  margin-right: 0.2rem;
+}
+.stock__container .stock__list .stock__link .stock__gab-price {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+.stock__container .stock__list .stock__link .stock__gab-rate {
+  font-size: 1.2rem;
+}
+.stock__container .section__stock-info {
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+.stock__container .section__stock-info .stock-info__list {
+  border-radius: 2rem;
+  padding: 1.2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 14px;
+  background-color: #333333;
+}
+.stock__container .section__stock-info .stock-info__link {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.stock__container .stock__gab--up {
+  color: red;
+}
+.stock__container .stock__gab--down {
+  color: blue;
+}
+
+.reco-event__container {
+  grid-area: reco-event;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: #f5f5f5;
+}
+.reco-event__container .reco-event__list {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 1.5rem;
+}
+.reco-event__container .reco-event__item {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 3.3rem;
+  box-shadow: 0.2rem 0.5rem 0.5rem #e0e0e0;
+}
+.reco-event__container .reco-event__item .reco-event__link__image {
+  border-radius: 100%;
+  height: 5rem;
+  width: 5rem;
+  object-fit: contain;
+  background-color: #333333;
+}
+.reco-event__container .reco-event__item .fa-arrow-left {
+  display: none;
+}
+.reco-event__container .reco-event__item .fa-arrow-right {
+  display: none;
+}
+.reco-event__container .reco-event__link--left {
+  display: grid;
+  grid-template-columns: 1fr 5rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.reco-event__container .reco-event__link--left .reco-event__link__texts {
+  padding-left: 2rem;
+  display: grid;
+  grid-gap: 0.5rem;
+}
+.reco-event__container .reco-event__link--left .reco-event__link__texts > b {
+  font-size: 1.5rem;
+  color: #5b58ee;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5em;
+  height: 1.5em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+.reco-event__container .reco-event__link--left .reco-event__link__texts > p {
+  font-size: 1.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5em;
+  height: 1.5em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+.reco-event__container .reco-event__link--right {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  position: relative;
+  z-index: 2;
+}
+.reco-event__container .reco-event__link--right .reco-event__link__texts {
+  padding-right: 2rem;
+  display: grid;
+  grid-gap: 0.5rem;
+  justify-items: right;
+}
+.reco-event__container .reco-event__link--right .reco-event__link__texts > b {
+  font-size: 1.5rem;
+  color: #1cb110;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5em;
+  height: 1.5em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+.reco-event__container .reco-event__link--right .reco-event__link__texts > p {
+  font-size: 1.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5em;
+  height: 1.5em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+.reco-event__container .align--left {
+  position: relative;
+}
+.reco-event__container .align--left .fa-comment {
+  transform: rotate(75deg);
+  position: absolute;
+  left: -3px;
+  top: 5px;
+  z-index: 1;
+  font-size: 5rem;
+  color: white;
+}
+.reco-event__container .align--right {
+  position: relative;
+}
+.reco-event__container .align--right .fa-comment {
+  transform: scaleY(-1) rotate(-100deg);
+  position: absolute;
+  right: 1px;
+  top: 4px;
+  z-index: 1;
+  font-size: 5rem;
+  color: white;
+}
+
+.nav__container--float {
+  background-color: #333333;
+}
+
+.nav__list {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  overflow: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  font-weight: bold;
+}
+.nav__list .nav__link {
+  color: #cccccc;
+}
+
+@media (min-width: 993px) {
+  .mobile-and-tablet-version {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .carousel__container, .weather__container, .live__container, .virus, .virus-info, .now__container, .ad__container--02, .naver-app-ad, .stock__container, .reco-event__container {
+    border-radius: 1rem;
+    margin: 0;
+  }
+  .carousel__container, .virus {
+    display: none;
+  }
+  .border__bottom {
+    border-bottom: 0.1rem solid #f0f0f0;
+  }
+  .ad__container--01 .ad__link > img {
+    box-shadow: none;
+  }
+  .tablet-version {
+    padding: 1.5rem 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row dense;
+    grid-gap: 2rem;
+    grid-template-areas: "weather now" "weather now" "weather now" "live ad" "live virus-info" "live naver-app-ad" "live stock" "banner--01 reco-event" "banner--02 reco-event" "banner--04 reco-event" "banner--04 banner--03" "banner--04 banner--03" "banner--04 banner--03" ". banner--03";
+  }
+  .reco-event__container {
+    grid-area: reco-event;
+    background-color: white;
+  }
+  .reco-event__container .reco-event__item {
+    border-radius: unset;
+    box-shadow: none;
+  }
+  .reco-event__container .reco-event__item .fa-arrow-left {
+    display: inline;
+    color: #5b58ee;
+  }
+  .reco-event__container .reco-event__item .fa-arrow-right {
+    display: inline;
+    color: #1cb110;
+  }
+  .reco-event__container .reco-event__item .reco-event__link--left {
+    grid-template-columns: 2.5rem 1fr 5rem;
+  }
+  .reco-event__container .reco-event__item .reco-event__link--left .reco-event__link__texts {
+    margin-right: 1rem;
+    justify-items: right;
+  }
+  .reco-event__container .reco-event__item .reco-event__link--right {
+    grid-template-columns: 5rem 1fr 2.5rem;
+  }
+  .reco-event__container .reco-event__item .reco-event__link--right .reco-event__link__texts {
+    margin-left: 1rem;
+    justify-items: left;
+  }
+  .section__naver-banner .naver-banner__item {
+    width: 100%;
+  }
+  .section__naver-banner .naver-banner__link {
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+  }
+  .section__naver-banner .naver-banner__link > img {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .section__naver-banner .naver-banner__link .nb-01 {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    grid-gap: 1rem;
+    align-items: center;
+    background-color: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  .section__naver-banner .naver-banner__link .nb-01 > i {
+    border: 0.1rem solid #efefef;
+    border-radius: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .section__naver-banner .naver-banner__link .nb-01__sub {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .section__naver-banner .naver-banner__link .nb-01__sub .text--01 {
+    font-size: 1.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 2rem;
+    height: 2rem; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+  }
+  .section__naver-banner .naver-banner__link .nb-01__sub .text--02 {
+    font-size: 1.3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 2rem;
+    height: 2rem; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+  }
+  .banner--01 {
+    grid-area: banner--01;
+  }
+  .banner--02 {
+    grid-area: banner--02;
+  }
+  .banner--03 {
+    grid-area: banner--03;
+  }
+  .banner--04 {
+    grid-area: banner--04;
+  }
+  .event-link--bottom {
+    display: flex;
+    margin: 3rem auto;
+    width: 220px;
+  }
+  .event-link--bottom > i {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 695px) {
+  .virus-info__item--04 {
+    display: none;
+  }
+}
+body i {
+  color: #333333;
+}
+body button {
+  background-color: transparent;
+}
+body a {
+  color: black;
+}
+
+.border__left {
+  border-left: 0.1rem solid #f0f0f0;
+}
+
+.event-link--bottom {
+  display: none;
+}
+
+.menu--fixed {
+  position: fixed;
+  transform: translateX(0%);
+  top: 0;
+  z-index: 4;
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+  .section__naver-banner {
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 992px) {
+  .desktop-version {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=page.css.map */
