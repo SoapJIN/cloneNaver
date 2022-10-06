@@ -5,13 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
 
-    <title>Title</title>
-    <link rel="stylesheet" href="css/page.css" />
-    <link rel="stylesheet" href="css/layout/hcf.css" />
-    <link rel="stylesheet" href="./libraries/fontawesome-free-6.1.2-web/css/all.min.css" />
-<!--    <link rel="stylesheet" href="./css/media/tablet.css">-->
-<!--    <link rel="stylesheet" href="./css/media/_desktop.css">-->
-
+    <title>JIN</title>
+    <link rel="stylesheet" type="text/css" href="css/page.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout/hcf.css" />
+    <link rel="stylesheet" type="text/css" href="./libraries/fontawesome-free-6.1.2-web/css/all.min.css" />
     <script src="./libraries/jquery/jquery-3.6.1.min.js"></script>
     <script src="./script/page/index.js"></script>
 </head>
@@ -66,10 +63,10 @@
                     </div>
                     <ul class="pagination__list">
                         <li class="pagination__item">
-                            <button class="pagination__button"><i class="fa-solid fa-circle"></i></button>
+                            <a class="pagination__button" href="#"><i class="fa-solid fa-circle"></i></a>
                         </li>
                         <li class="pagination__item">
-                            <button class="pagination__button"><i class="fa-solid fa-circle"></i></button>
+                            <a class="pagination__button" href="#"><i class="fa-solid fa-circle"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -83,7 +80,7 @@
                             <button class="order-change__button">순서변경</button>
                         </div>
                     </div>
-                    <section class="section__service">
+                    <section class="section__service ">
                         <p class="service__title">뉴스</p>
                         <ul class="service__list">
                             <li class="service__item">
@@ -191,7 +188,7 @@
                 </section>
         </aside>
 
-        <header class="layout__header">
+        <header>
             <div class="layout__header--float js--header--float">
                 <div class="search__container--float search">
                     <a class="logo"><i class="fa-solid fa-n"></i></a>
@@ -237,7 +234,7 @@
             </div>
         </header>
 
-        <main class="main">
+        <main>
             <div class="x-scroll__container js--main--x-scroll ">
                 <div class="x-scroll__container__item x-scroll__container__item--home">
                     <section class="x-scroll__container__search-and-shortcut">
@@ -832,7 +829,7 @@
                         </section>
 
                     </div>
-                    <!--        start-->
+                    <!--tablet-version-->
                     <a class="event-link--bottom link__button" href="#">
                         <img src="./image/img8.png"/>
                         <span>이벤트 모아보기</span>
@@ -877,7 +874,733 @@
         </footer>
     </div>
 
-    <div class="desktop-version includeJs" data-include-file="./desktop_page.html"></div>
-</body>
+<!--    <div class="desktop-version includeJs" data-include-file="./desktop_page.html"></div>-->
 
+
+    <div class="desktop-version">
+
+        <header class="layout__header">
+            <div class="layout__header__service__container">
+                <nav class="layout__header__service__nav">
+                    <a class="link__set-home-naver" href="#">네이버를 시작페이지로<i class="fa-solid fa-angle-right"></i></a>
+                    <a class="link__jrnaver" href="#">쥬니어네이버</a>
+                    <a class="link__happybin" href="#">해피빈</a>
+                </nav>
+            </div>
+            <div class="layout__header__search__container">
+                <a class="naver__link" href="#"><i class="fa-solid fa-n"></i><span>NAVER</span></a>
+                <input class="search__input" type="text"/>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+
+        </header>
+
+        <main>
+            <div class="layout__header__fav__container ">
+                <div class="layout__header__nav-and-weather">
+                    <nav class="layout__header__nav">
+                        <ul class="layout__header__nav__list font__point-color">
+                            <li class="nav__item"><a href="#"><p>메일</p></a></li>
+                            <li class="nav__item"><a href="#"><p>카페</p></a></li>
+                            <li class="nav__item"><a href="#"><p>블로그</p></a></li>
+                            <li class="nav__item"><a href="#"><p>지식인</p></a></li>
+                            <li class="nav__item"><a href="#"><p>쇼핑</p></a></li>
+                            <li class="nav__item"><a href="#"><p>쇼핑live</p></a></li>
+                            <li class="nav__item"><a href="#"><p>Pay</p></a></li>
+                            <li class="nav__item"><a href="#"><p>TV</p></a></li>
+                        </ul>
+                        <ul class="layout__header__nav__list">
+                            <li class="nav__item"><a href="#"><p>사전</p></a></li>
+                            <li class="nav__item"><a href="#"><p>뉴스</p></a></li>
+                            <li class="nav__item"><a href="#"><p>부동산</p></a></li>
+                            <li class="nav__item"><a href="#"><p>지도</p></a></li>
+                            <li class="nav__item"><a href="#"><p>VIBE</p></a></li>
+                            <li class="nav__item"><a href="#"><p>도서</p></a></li>
+                            <li class="nav__item"><a href="#"><p>웹툰</p></a></li>
+                        </ul>
+                        <ul class="layout__header__nav__list empty-box__list">
+                            <li class="nav__item"><div class="empty__box js--empty--box"></div></li>
+                            <li class="nav__item"><div class="empty__box js--empty--box"></div></li>
+                            <li class="nav__item"><div class="empty__box js--empty--box"></div></li>
+                            <li class="nav__item"><div class="empty__box js--empty--box"></div></li>
+                        </ul>
+                        <button class="nav__more__button js--nav--more--button"><span>더보기</span><i class="fa-solid fa-chevron-down"></i></button>
+                    </nav>
+
+                    <div class="layout__header__nav__set js--layout--header--nav--set">
+                        <ul class="nav__set__list">
+                            <li class="nav__set__item"><a class="nav__link" href="#">서비스 전체보기</a></li>
+                            <li class="nav__set__item"><a class="nav__set__button js--nav--set--button" href="#"><i class="fa-solid fa-gear"></i><span>메뉴설정</span></a></li>
+                            <li class="nav__set__item"><a class="nav__set__button--reset js--nav--set--button--reset" href="#"><i class="fa-solid fa-arrow-rotate-left"></i><span>초기화</span></a></li>
+                            <li class="nav__set__item"><a class="nav__set__button--save js--nav--set--button--save" href="#"><span>저장</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="layout__header__weather">
+                        <a class="layout__header__weather__link" href="">
+                            <i class="fa-solid fa-sun"></i>
+                            <p class="now__temp__text">24.0</p>
+                            <p class="now__temp__weather__text">맑음</p>
+                            <p class="today__temp__lowest__text">14.0°C</p>
+                            <p class="today__temp__maximum__text">25.0°C</p>
+                            <p class="now__location__text">역삼동</p></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layout__header__fav__container--float js--fav--container--float">
+                <ul class="layout__header__nav__list--row">
+                    <li class="nav__item">
+                        <p class="font__title">ㄱ-ㅁ</p>
+                        <a class="nav__link" href="#"><p>구독</p></a>
+                        <a class="nav__link" href="#"><p>날씨</p></a>
+                        <a class="nav__link" href="#"><p>네이버 MY CAR</p></a>
+                        <a class="nav__link" href="#"><p>네이버 게임</p></a>
+                        <a class="nav__link" href="#"><p>네이버 프리미엄콘텐츠</p></a>
+                        <a class="nav__link" href="#"><p>뉴스</p></a>
+                        <a class="nav__link" href="#"><p>도서</p></a>
+                        <a class="nav__link" href="#"><p>데이터랩</p></a>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">ㅂ-ㅅ</p>
+                        <a class="nav__link" href="#"><p>밴드</p></a>
+                        <a class="nav__link" href="#"><p>부동산</p></a>
+                        <a class="nav__link" href="#"><p>스포츠</p></a>
+                        <a class="nav__link" href="#"><p>시리즈</p></a>
+                        <a class="nav__link" href="#"><p>시리즈온</p></a>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">ㅇ</p>
+                        <a class="nav__link" href="#"><p>구독</p></a>
+                        <a class="nav__link" href="#"><p>날씨</p></a>
+                        <a class="nav__link" href="#"><p>네이버 MY CAR</p></a>
+                        <a class="nav__link" href="#"><p>네이버 게임</p></a>
+                        <a class="nav__link" href="#"><p>네이버 프리미엄콘텐츠</p></a>
+                        <a class="nav__link" href="#"><p>뉴스</p></a>
+                        <a class="nav__link" href="#"><p>도서</p></a>
+                        <a class="nav__link" href="#"><p>데이터랩</p></a>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">ㅈ-ㅊ</p>
+                        <a class="nav__link" href="#"><p>구독</p></a>
+                        <a class="nav__link" href="#"><p>날씨</p></a>
+                        <a class="nav__link" href="#"><p>네이버 MY CAR</p></a>
+                        <a class="nav__link" href="#"><p>네이버 게임</p></a>
+                        <a class="nav__link" href="#"><p>네이버 프리미엄콘텐츠</p></a>
+                        <a class="nav__link" href="#"><p>뉴스</p></a>
+                        <a class="nav__link" href="#"><p>도서</p></a>
+                        <a class="nav__link" href="#"><p>데이터랩</p></a>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">ㅋ-ㅎ</p>
+                        <a class="nav__link" href="#"><p>구독</p></a>
+                        <a class="nav__link" href="#"><p>날씨</p></a>
+                        <a class="nav__link" href="#"><p>네이버 MY CAR</p></a>
+                        <a class="nav__link" href="#"><p>네이버 게임</p></a>
+                        <a class="nav__link" href="#"><p>네이버 프리미엄콘텐츠</p></a>
+                        <a class="nav__link" href="#"><p>뉴스</p></a>
+                        <a class="nav__link" href="#"><p>도서</p></a>
+                        <a class="nav__link" href="#"><p>데이터랩</p></a>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">A-Z</p>
+                        <a class="nav__link" href="#"><p>구독</p></a>
+                        <a class="nav__link" href="#"><p>날씨</p></a>
+                        <a class="nav__link" href="#"><p>네이버 MY CAR</p></a>
+                        <a class="nav__link" href="#"><p>네이버 게임</p></a>
+                        <a class="nav__link" href="#"><p>네이버 프리미엄콘텐츠</p></a>
+                        <a class="nav__link" href="#"><p>뉴스</p></a>
+                        <a class="nav__link" href="#"><p>도서</p></a>
+                        <a class="nav__link" href="#"><p>데이터랩</p></a>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">사전</p>
+                        <a class="nav__link" href="#"><p>구독</p></a>
+                        <a class="nav__link" href="#"><p>날씨</p></a>
+                        <a class="nav__link" href="#"><p>네이버 MY CAR</p></a>
+                        <a class="nav__link" href="#"><p>네이버 게임</p></a>
+                        <a class="nav__link" href="#"><p>네이버 프리미엄콘텐츠</p></a>
+                        <a class="nav__link" href="#"><p>뉴스</p></a>
+                        <a class="nav__link" href="#"><p>도서</p></a>
+                        <a class="nav__link" href="#"><p>데이터랩</p></a>
+                    </li>
+                </ul>
+                <ul class="layout__header__nav__list--row">
+                    <li class="nav__item">
+                        <p class="font__title">ㄱ-ㅁ</p>
+                        <label><input class="nav__checkbox" type="checkbox" name="myfeed" value="myfeed"/>구독</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="weather" value="weather"/>날씨</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="mycar" value="mycar"/>네이버 MY CAR</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="ngame" value="ngame"/>네이버 게임</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="premium" value="premium"/>네이버 프리미엄콘텐츠</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="news" value="news"/>뉴스</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="booking" value="booking"/>도서</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="datalab" value="datalab"/>데이터랩</label>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">ㅂ-ㅅ</p>
+                        <label><input type="checkbox" name="myfeed" value="myfeed"/>구독</label>
+                        <label><input type="checkbox" name="weather" value="weather"/>날씨</label>
+                        <label><input type="checkbox" name="mycar" value="mycar"/>네이버 MY CAR</label>
+                        <label><input type="checkbox" name="ngame" value="ngame"/>네이버 게임</label>
+                        <label><input type="checkbox" name="ngame" value="ngame"/>네이버 게임</label>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">ㅇ</p>
+                        <label><input class="nav__checkbox" type="checkbox" name="myfeed" value="myfeed"/>구독</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="weather" value="weather"/>날씨</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="mycar" value="mycar"/>네이버 MY CAR</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="ngame" value="ngame"/>네이버 게임</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="premium" value="premium"/>네이버 프리미엄콘텐츠</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="news" value="news"/>뉴스</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="booking" value="booking"/>도서</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="datalab" value="datalab"/>데이터랩</label>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">ㅈ-ㅊ</p>
+                        <label><input class="nav__checkbox" type="checkbox" name="myfeed" value="myfeed"/>구독</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="weather" value="weather"/>날씨</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="mycar" value="mycar"/>네이버 MY CAR</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="ngame" value="ngame"/>네이버 게임</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="premium" value="premium"/>네이버 프리미엄콘텐츠</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="news" value="news"/>뉴스</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="booking" value="booking"/>도서</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="datalab" value="datalab"/>데이터랩</label>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">ㅋ-ㅎ</p>
+                        <label><input class="nav__checkbox" type="checkbox" name="myfeed" value="myfeed"/>구독</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="weather" value="weather"/>날씨</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="mycar" value="mycar"/>네이버 MY CAR</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="ngame" value="ngame"/>네이버 게임</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="premium" value="premium"/>네이버 프리미엄콘텐츠</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="news" value="news"/>뉴스</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="booking" value="booking"/>도서</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="datalab" value="datalab"/>데이터랩</label>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">A-Z</p>
+                        <label><input class="nav__checkbox" type="checkbox" name="myfeed" value="myfeed"/>구독</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="weather" value="weather"/>날씨</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="mycar" value="mycar"/>네이버 MY CAR</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="ngame" value="ngame"/>네이버 게임</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="premium" value="premium"/>네이버 프리미엄콘텐츠</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="news" value="news"/>뉴스</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="booking" value="booking"/>도서</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="datalab" value="datalab"/>데이터랩</label>
+                    </li>
+                    <li class="nav__item">
+                        <p class="font__title">사전</p>
+                        <label><input class="nav__checkbox" type="checkbox" name="myfeed" value="myfeed"/>구독</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="weather" value="weather"/>날씨</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="mycar" value="mycar"/>네이버 MY CAR</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="ngame" value="ngame"/>네이버 게임</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="premium" value="premium"/>네이버 프리미엄콘텐츠</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="news" value="news"/>뉴스</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="booking" value="booking"/>도서</label>
+                        <label><input class="nav__checkbox" type="checkbox" name="datalab" value="datalab"/>데이터랩</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="middle__container">
+                <div class="column--left">
+                    <div class="ad__container--03">
+                        <a class="ad__link" href="#"><img src="./image/gray.jpg" alt=""/></a>
+                    </div>
+
+                    <section class="section__news__banner ">
+                        <div class="news__banner--left ">
+                            <a class="news__banner__link__title" href="#"><span>연합뉴스</span><i class="fa-solid fa-chevron-right"></i></a>
+                            <a class="news__banner__link__txt" href="#"><p>"안녕하신가요?" 요즘 날씨가 선선해서 좋아요! 구름도 많이 없고 걷기 좋은 날씨인 거 같아요!</p></a>
+                        </div>
+                        <div class="news__banner--right">
+                            <a class="news__banner__link__news-home__txt" href="#">뉴스홈</a>
+                            <a class="news__banner__link__ent__txt" href="#">연예</a>
+                            <a class="news__banner__link__sports__txt" href="#">스포츠</a>
+                            <a class="news__banner__link__economy__txt" href="#">경제</a>
+                        </div>
+                    </section>
+
+                    <section class="section__news-stand">
+                        <div class="news-stand__container ">
+                            <div class="news-stand__header">
+                                <div class="news-stand__sort">
+                                    <a class="news-stand__link" href=""><i class="fa-regular fa-newspaper"></i><span>뉴스스탠드</span><i class="fa-solid fa-chevron-right"></i></a>
+                                    <a class="news-stand__sub-press_button" href=""><span>구독한 언론사</span></a>
+                                    <a class="news-stand__total-press_button" href=""><span>전체언론사</span></a>
+                                </div>
+                                <div class="news-stand__view-set">
+                                    <a class="news-stand__article-view__button" href=""><i class="fa-regular fa-rectangle-list"></i></a>
+                                    <a class="news-stand__grid-view__button" href=""><i class="fa-solid fa-table-cells-large"></i></a>
+                                    <a href=""><i class="fa-solid fa-gear"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="arrow__button button--prev js--button--prev"><i class="fa-solid fa-angle-left"></i></button>
+                                <button class="arrow__button button--next js--button--next"><i class="fa-solid fa-angle-right"></i></button>
+                            </div>
+                            <nav class="news-stand__nav js--news-stand--nav">
+                                <ul class="news-stand__list">
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>MBN111</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>전자신문</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>더스쿠프</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>데일리한국</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>NewDaily</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>데일리안</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>맥스무비</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>동아일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>SBS연예뉴스</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                </ul>
+                                <ul class="news-stand__list">
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>MBN222</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>전자신문</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>더스쿠프</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>데일리한국</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>NewDaily</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>데일리안</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>맥스무비</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>동아일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>SBS연예뉴스</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                </ul>
+                                <ul class="news-stand__list">
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>MBN333</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>전자신문</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>더스쿠프</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>데일리한국</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>NewDaily</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>데일리안</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>맥스무비</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>동아일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>SBS연예뉴스</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                    <li class="news-stand__item"><a class="news-stand__link" href=""><p>국민일보</p></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </section>
+
+                    <section class="section__today__reco-writing ">
+                        <div class="today__reco-writing__header">
+                            <div class="today__reco-writing__title">
+                                <p class="font__title">오늘 읽을만한 글</p>
+                                <span>주제별로 분류된 다양한 글 모음</span>
+                            </div>
+                            <div class="today__reco-writing__set">
+                                <strong class="info__count">620</strong>개의 글
+                                <button class="info__set__button">
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>관심주제 설정</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="arrow__button button--prev--02 js--button--prev--02"><i class="fa-solid fa-angle-left"></i></button>
+                            <button class="arrow__button button--next--02 js--button--next--02"><i class="fa-solid fa-angle-right"></i></button>
+                        </div>
+
+                        <nav class="today__reco-writing__nav js--today--reco-writing--nav">
+                            <ul class="today__reco-writing__list">
+                                <li class="today__reco-writing__item" data-tab="enter"><a class="today__reco-writing__link" href="#"><p>엔터</p></a></li>
+                                <li class="today__reco-writing__item current" data-tab="car"><a class="today__reco-writing__link" href="#"><p>자동차</p></a></li>
+                                <li class="today__reco-writing__item" data-tab="sports"><a class="today__reco-writing__link" href="#"><p>스포츠</p></a></li>
+                                <li class="today__reco-writing__item" data-tab="webtoon"><a class="today__reco-writing__link" href="#"><p>웹툰</p></a></li>
+                                <li class="today__reco-writing__item" data-tab="economy"><a class="today__reco-writing__link" href="#"><p>경제</p></a></li>
+                                <li class="today__reco-writing__item" data-tab="myfeed"><a class="today__reco-writing__link" href="#"><p>추천·구독</p></a></li>
+                                <li class="today__reco-writing__item" data-tab="recipe"><a class="today__reco-writing__link" href="#"><p>레시피</p></a></li>
+                                <li class="today__reco-writing__item" data-tab="living"><a class="today__reco-writing__link" href="#"><p>리빙</p></a></li>
+                                <li class="today__reco-writing__item" data-tab="bookstore"><a class="today__reco-writing__link" href="#"><p>책방</p></a></li>
+                                <li class="today__reco-writing__item" data-tab="beauty"><a class="today__reco-writing__link" href="#"><p>패션뷰티</p></a></li>
+                            </ul>
+                        </nav>
+                    </section>
+
+
+
+                    <section class="section__group-view">
+                        <div class="tab-content" id="sports" style="background-color: #1d80bc; height: 120px">
+                            스포츠 영역!!!!!!!!!!!!
+                        </div>
+                        <div class="tab-content current" id="car">
+                            <div class="top-story__container" >
+                                <div class="top-story--left">
+                                    <a href="#" ><img src="image/ad_04.jpg" /></a>
+                                    <a><p>네이버 마이카 오너평가</p><strong>'내 차는 내가 평가한다!'</strong><p>오너 평가 하면 ! 네이버페이 포인트 500원을 적립</p><p>네이버 MY CAR</p></a>
+                                </div>
+                                <div class="top-story__right">
+                                    <nav>
+                                        <ul class="list--row">
+                                            <li class="item">
+                                                <a class="link"><img src="image/car.jpg"/></a>
+                                                <a class="link">
+                                                    <div class="item__texts">
+                                                        <p class="item__title">브랜드 위크</p>
+                                                        <strong>폭스 바겐 순수 전기 SUV ID.4 브랜드관에서 확인하세요!</strong>
+                                                        <p class="item__producer">AD</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="item">
+                                                <a class="link"><img src="image/car_02.jpg"/></a>
+                                                <a class="link">
+                                                    <div class="item__texts">
+                                                        <p class="item__title">시승기</p>
+                                                        <strong>폭스 바겐 순수 전기 SUV ID.4 브랜드관에서 확인하세요!</strong>
+                                                        <p class="item__producer">모터플렉스</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="item">
+                                                <a class="link"><img src="image/car_03.jpg"/></a>
+                                                <a class="link">
+                                                    <div class="item__texts">
+                                                        <p>브랜 class=item__title"드 위크</p>
+                                                        <strong>폭스 바겐 순수 전기 SUV ID.4 브랜드관에서 확인하세요!</strong>
+                                                        <p class="item__producer">다키</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <div class="group__theme">
+                                <nav class="group__nav">
+                                    <ul class="list--row">
+                                        <li class="item item__img--170">
+                                            <a class="link"><img class="link__img" src="image/car.jpg"/></a>
+                                            <a class="link">
+                                                <div class="item__texts">
+                                                    <span class="item__title">민티드</span>
+                                                    <button><span>AD</span><i class="fa-solid fa-x"></i></button>
+                                                </div>
+                                                <strong>나만몰랐던 치약의 신세계</strong>
+                                                <p>입냄새가 사라져요</p>
+                                                <p>효과없으면 환불 가능</p>
+                                                <span>더 알아보기</span>
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </a>
+                                        </li>
+                                        <li class="item item__img--170">
+                                            <a class="link"><img src="image/car.jpg" /></a>
+                                            <a class="link">
+                                                <p>자동차</p>
+                                                <strong>20대 한정! 쉐보레 카마로 래피드 블루 에디션 공개...특징은?</strong>
+                                                <p>가자가자가자가자자아아소자가자가자가아아아아안가가자가자가자가자자아아소자가자가자가아아아아안가</p>
+                                                <span>탑라이더</span>
+                                                <span>· 2일전</span>
+                                            </a>
+                                        </li>
+                                        <li class="item item__img--170">
+                                            <a class="link">
+                                                <img src="image/car.jpg" />
+                                            </a>
+                                            <a class="link">
+                                                <p>자동차</p>
+                                                <strong>20대 한정! 쉐보레 카마로 래피드 블루 에디션 공개...특징은?</strong>
+                                                <p>가자가자가자가자자아아소자가자가자가아아아아안가가자가자가자가자자아아소자가자가자가아아아아안가</p>
+                                                <span>탑라이더</span>
+                                                <span>· 2일전</span>
+                                            </a>
+                                        </li>
+                                        <li class="item item__img--170">
+                                            <a class="link">
+                                                <img src="image/car.jpg"/>
+                                            </a>
+                                            <a class="link">
+                                                <p>자동차</p>
+                                                <strong>20대 한정! 쉐보레 카마로 래피드 블루 에디션 공개...특징은?</strong>
+                                                <p>가자가자가자가자자아아소자가자가자가아아아아안가가자가자가자가자자아아소자가자가자가아아아아안가</p>
+                                                <span>탑라이더</span>
+                                                <span>· 2일전</span>
+                                            </a>
+                                        </li>
+                                        <li class="item item__img--170">
+                                            <a class="link">
+                                                <img src="image/car.jpg"/>
+                                            </a>
+                                            <a class="link">
+                                                <p>자동차</p>
+                                                <strong>20대 한정! 쉐보레 카마로 래피드 블루 에디션 공개...특징은?</strong>
+                                                <p>가자가자가자가자자아아소자가자가자가아아아아안가가자가자가자가자자아아소자가자가자가아아아아안가</p>
+                                                <span>탑라이더</span>
+                                                <span>· 2일전</span>
+                                            </a>
+                                        </li>
+                                        <li class="item item__img--170">
+                                            <a class="link">
+                                                <img src="image/car.jpg"/>
+                                            </a>
+                                            <a class="link">
+                                                <p>자동차</p>
+                                                <strong>20대 한정! 쉐보레 카마로 래피드 블루 에디션 공개...특징은?</strong>
+                                                <p>가자가자가자가자자아아소자가자가자가아아아아안가가자가자가자가자자아아소자가자가자가아아아아안가</p>
+                                                <span>탑라이더</span>
+                                                <span>· 2일전</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+
+                            <div class="group__theme">
+                                <p class="container__title font__title">주목할만한 신차</p>
+                                <div>
+                                    <button class="arrow__button button--prev--03 js--button--prev--03" ><i class="fa-solid fa-angle-left"></i></button>
+                                    <button class="arrow__button button--next--03 js--button--next--03"><i class="fa-solid fa-angle-right"></i></button>
+                                </div>
+
+                                <nav class="group__nav">
+                                    <ul class="list--colunmn pagination__car__list js--car--list">
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 스타리아</strong><p>현대</p></a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 메르세데스-벤츠 쿠페 플러그인</strong><p>현대</p></a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 스타리아</strong><p>현대</p></a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 스타리아</strong><p>현대</p></a>
+                                        </li>
+                                    </ul>
+                                    <ul class="list--colunmn pagination__car__list js--car--list">
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 스타리아222</strong><p>현대</p></a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 메르세데스-벤츠 쿠페 플러그인222</strong><p>현대</p></a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 스타리아222</strong><p>현대</p></a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 스타리아222</strong><p>현대</p></a>
+                                        </li>
+                                    </ul>
+                                    <ul class="list--colunmn pagination__car__list js--car--list">
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 스타리아33</strong><p>현대</p></a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 메르세데스-벤츠 쿠페 플러그인33</strong><p>현대</p></a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 스타리아33</strong><p>현대</p></a>
+                                        </li>
+                                        <li class="item">
+                                            <a class="link" href=""><img src="image/car_04.png"/></a>
+                                            <a class="link" href=""><strong>2023 스타리아33</strong><p>현대</p></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+
+                            <div class="group__theme">
+                                <nav class="group__nav">
+                                    <ul class="list--row">
+                                        <li class="item item__img--170">
+                                            <a class="link">
+                                                <img src="image/car.jpg" />
+                                            </a>
+                                            <a class="link">
+                                                <p>자동차</p>
+                                                <strong>전설적인 드래그 머신의 귀환, 닷지 챌린저 블랙 고스트 한정 에디션 공개</strong>
+                                                <p>[Motoroid / New Car] 챌린저 블랙 고스트 리미티드 에디션 미국 자동차 브랜드 닷지가 '챌린저 블랙 고스트(Challenger Black Ghost)' 리미티드 에디션을 새롭게 선보인다</p>
+                                                <span>모터로이드</span>
+                                                <span>· 3일전</span>
+                                            </a>
+                                        </li>
+                                        <li class="item item__img--170">
+                                            <a class="link">
+                                                <img src="image/car.jpg" />
+                                            </a>
+                                            <a class="link">
+                                                <p>자동차</p>
+                                                <strong>전설적인 드래그 머신의 귀환, 닷지 챌린저 블랙 고스트 한정 에디션 공개</strong>
+                                                <p>[Motoroid / New Car] 챌린저 블랙 고스트 리미티드 에디션 미국 자동차 브랜드 닷지가 '챌린저 블랙 고스트(Challenger Black Ghost)' 리미티드 에디션을 새롭게 선보인다</p>
+                                                <span>모터로이드</span>
+                                                <span>· 3일전</span>
+                                            </a>
+                                        </li>
+                                        <li class="item item__img--170">
+                                            <a class="link">
+                                                <img src="image/car.jpg" />
+                                            </a>
+                                            <a class="link">
+                                                <p>자동차</p>
+                                                <strong>전설적인 드래그 머신의 귀환, 닷지 챌린저 블랙 고스트 한정 에디션 공개</strong>
+                                                <p>[Motoroid / New Car] 챌린저 블랙 고스트 리미티드 에디션 미국 자동차 브랜드 닷지가 '챌린저 블랙 고스트(Challenger Black Ghost)' 리미티드 에디션을 새롭게 선보인다</p>
+                                                <span>모터로이드</span>
+                                                <span>· 3일전</span>
+                                            </a>
+                                        </li>
+                                        <li class="item item__img--170">
+                                            <a class="link">
+                                                <img src="image/car.jpg" />
+                                            </a>
+                                            <a class="link">
+                                                <p>자동차</p>
+                                                <strong>전설적인 드래그 머신의 귀환, 닷지 챌린저 블랙 고스트 한정 에디션 공개</strong>
+                                                <p>[Motoroid / New Car] 챌린저 블랙 고스트 리미티드 에디션 미국 자동차 브랜드 닷지가 '챌린저 블랙 고스트(Challenger Black Ghost)' 리미티드 에디션을 새롭게 선보인다</p>
+                                                <span>모터로이드</span>
+                                                <span>· 3일전</span>
+                                            </a>
+                                        </li>
+                                        <li class="item item__img--170">
+                                            <a class="link">
+                                                <img src="image/car.jpg" />
+                                            </a>
+                                            <a class="link">
+                                                <p>자동차</p>
+                                                <strong>전설적인 드래그 머신의 귀환, 닷지 챌린저 블랙 고스트 한정 에디션 공개</strong>
+                                                <p>[Motoroid / New Car] 챌린저 블랙 고스트 리미티드 에디션 미국 자동차 브랜드 닷지가 '챌린저 블랙 고스트(Challenger Black Ghost)' 리미티드 에디션을 새롭게 선보인다</p>
+                                                <span>모터로이드</span>
+                                                <span>· 3일전</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div class="group__theme">
+                                <nav class="group__nav">
+                                    <ul class="list--colunmn">
+                                        <li class="item">
+<!--                                            <iframe src="https://www.youtube.com/embed/LLFCFBoV0zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                                            <a class="link">
+                                                <p class="font__title">[강아지]이렇게 귀여울수가?!</p>
+                                                <div>
+                                                    <span>healingmate</span>
+                                                    <span>· 2일전</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="item">
+<!--                                            <iframe src="https://www.youtube.com/embed/LLFCFBoV0zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                                            <a class="link">
+                                                <p class="font__title">[강아지]이렇게 귀여울수가?!</p>
+                                                <div>
+                                                    <span>healingmate</span>
+                                                    <span>· 2일전</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="item">
+<!--                                            <iframe src="https://www.youtube.com/embed/LLFCFBoV0zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                                            <a class="link">
+                                                <p class="font__title">[강아지]이렇게 귀여울수가?!</p>
+                                                <div>
+                                                    <span>healingmate</span>
+                                                    <span>· 2일전</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="item">
+<!--                                            <iframe src="https://www.youtube.com/embed/LLFCFBoV0zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                                            <a class="link">
+                                                <p class="font__title">[강아지]이렇게 귀여울수가?!</p>
+                                                <div>
+                                                    <span>healingmate</span>
+                                                    <span>· 2일전</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="column--right">
+                    <div style="background-color: darksalmon; height: 600px; font-size: 20px">사이드바 입니다!!!!</div>
+                </aside>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="layout__footer__title">
+                <ul class="layout__footer__title__list--left">
+                    <li><button class="font-size__button js--font-size--decrease">가 <i class="fa-solid fa-minus"></i></button></li>
+                    <li><button class="font-size__button border__left js--font-size--increase">가 <i class="fa-solid fa-plus"></i></button></li>
+                </ul>
+                <button><i class="fa-solid fa-arrows-up-to-line"></i></button>
+            </div>
+
+            <div class="layout__footer__info__link">
+                <div class="layout__footer__info__link--top">
+                    <a href="#">로그인</a>
+                    <a href="#">전체서비스</a>
+                    <a href="#">PC버전</a>
+                </div>
+                <div class="layout__footer__info__link--bottom">
+                    <a href="#">이용약관</a>
+                    <a href="#"><b>개인정보처리방침</b></a>
+                    <a href="#">고객센터</a>
+                </div>
+                <a href="#"><i class="fa-solid fa-robot"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
 </html>
