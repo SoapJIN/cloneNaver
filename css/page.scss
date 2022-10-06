@@ -7,13 +7,15 @@
 
 @import "extends/response";
 
-@import "extends/bundle/pagination";
+@import "media/desktop";
+@import "media/tablet";
+
 @import "extends/bundle/x_scroll";
+@import "extends/bundle/pagination";
 @import "extends/bundle/home_side";
 @import "extends/bundle/search";
 @import "extends/bundle/shortcut";
 @import "extends/bundle/scroll";
-@import "extends/bundle/pagination";
 @import "extends/bundle/virus";
 @import "extends/bundle/weather";
 @import "extends/bundle/carousel";
@@ -23,9 +25,9 @@
 @import "extends/bundle/reco";
 @import "extends/bundle/nav";
 
+@import "extends/bundle/news_banner";
+@import "extends/bundle/news_stand";
 
-@import "media/desktop";
-@import "media/tablet";
 
 body {
   i {
@@ -50,15 +52,6 @@ body {
 .event-link--bottom {
   display: none;
 }
-
-
-.menu--fixed {
-  position: fixed;
-  transform: translateX(0%);
-  top: 0;
-  z-index: 4;
-}
-
 
 
 
