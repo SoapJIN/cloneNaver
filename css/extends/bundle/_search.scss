@@ -1,0 +1,36 @@
+.search {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 18.75px 1fr 18.75px;
+  grid-gap: 1rem;
+
+  &__input {
+    border: 0 none;
+    padding: 1.5rem 0 1.5rem 0.3rem; //input안에 padding 설정
+    font-size: 15px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__mic-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: Transparent;
+  }
+}
+
+.home__search {
+  margin: 0 auto 2rem;
+  border: 0.1rem solid #000000;
+  border-radius: 10rem;
+  box-shadow: 0.2rem 0.5rem 0.5rem #e0e0e0;
+  max-width: 480px;
+  background-color: white;
+}
+
+.search__container--float {
+  height: 61px;
+  background-color: white;
+}

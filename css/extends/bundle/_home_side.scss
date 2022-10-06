@@ -1,0 +1,134 @@
+
+
+.home-side__container {
+  padding: 0 $default-padding;
+  position: fixed;
+  z-index: 4;
+  transform: translateX(-100%);
+  max-height: 100vh;
+  min-width: 100vw;
+  overflow-y: auto;
+  transition: all 1.5s;
+  font-size: 15px;
+  background-color: white;
+}
+
+.menu--fixed {
+  transform: translateX(0%);
+}
+
+.home-side__header {
+  padding: 10px 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  &__link-with-button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    > a > p{
+      font-weight: bold;
+    }
+  }
+}
+
+.home-side__button--close > i {
+  font-size: 18px;
+}
+
+.home-side__shortcut__container {
+  margin-bottom: 40px;
+  .shortcut {
+    display: unset;
+  }
+}
+
+.home-side__title__container {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .home-side__title__txt {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .home-side__title__set {
+    display: flex;
+  }
+
+  .ai__button:before {
+    margin:0 10px;
+    content: " ";
+    border-left: 0.1px solid #aaaaaa;
+  }
+
+  .order-change__button:before {
+    margin:0 10px;
+    content: " ";
+    border-left: 0.1px solid #aaaaaa;
+  }
+}
+
+.section__service {
+  margin-bottom: 15px;
+}
+
+.service__title {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px 15px;
+  font-size: 15px;
+  background-color: #aaaaaa;
+}
+
+.service__list {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  box-shadow: 1px 0.5px 3px #e0e0e0;
+}
+
+.service__list--row {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px;
+  display: grid;
+  grid-gap: 10px;
+  box-shadow: 1px 0.5px 3px #e0e0e0;
+}
+
+.service__item {
+  display: flex;
+  justify-content: space-between;
+
+  .service__link {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    > i {
+      border-radius: 30%;
+      padding: 7px;
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      background-color: #aaaaaa;
+    }
+  }
+  .service__bookmark-button > i {
+    color: #cccccc;
+    font-size: 20px;
+  }
+}

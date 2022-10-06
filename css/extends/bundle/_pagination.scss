@@ -1,0 +1,21 @@
+.pagination__list {
+  display: flex;
+  justify-content: center;
+
+  .pagination__item {
+
+    .pagination__button {
+      padding: 0 0.5rem;
+
+      > i {
+        font-size: 0.9rem;
+        color: #aaaaaa;
+      }
+
+      :hover {
+        color: #333333;
+      }
+    }
+  }
+}
+

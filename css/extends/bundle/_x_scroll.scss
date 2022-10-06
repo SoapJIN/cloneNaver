@@ -1,0 +1,29 @@
+
+.x-scroll__container {
+  display: grid;
+  grid-template-columns: repeat(3,100%);
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.x-scroll__container__search-and-shortcut {
+  padding: 6rem 1.5rem;
+}
+
+.x-scroll__container__item {
+  scroll-snap-align: center;
+
+  &--news {
+    margin-top: 37px;
+    font-size: 2rem;
+    background-color: #1d80bc;
+  }
+
+  &--ent {
+    margin-top: 37px;
+    font-size: 2rem;
+    background-color: #5b58ee;
+  }
+}
+

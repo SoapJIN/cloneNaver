@@ -1,0 +1,81 @@
+.stock__container {
+  grid-area: stock;
+  background-color: white;
+  margin-bottom: 1rem;
+
+  .stock__list {
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 2rem;
+    overflow-x: scroll;
+
+    .stock__item {
+      padding: 0 2rem 0 1.5rem;
+    }
+
+    .stock__link {
+
+      display: grid;
+      grid-template-rows: repeat(3,1fr);
+      grid-gap: 0.5rem;
+
+      .stock__title {
+        font-size: 1.4rem;
+      }
+
+      .stock__price {
+        font-size: 1.8rem;
+      }
+
+      .stock__gab {
+        display: flex;
+
+        > i {
+          font-size: 1rem;
+          margin-right: 0.2rem;
+        }
+
+        &-price {
+          margin-right: 0.5rem;
+          font-size: 1.2rem;
+
+        }
+        &-rate {
+          font-size: 1.2rem;
+        }
+
+      }
+    }
+  }
+
+  .section__stock-info {
+    padding: 0 1.5rem 1rem 1.5rem;
+
+    .stock-info__list {
+      border-radius: 2rem;
+      padding: 1.2rem 0;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      //align-items: center;
+      //justify-items: center;
+      font-size: 14px;
+      background-color: #333333;
+    }
+
+    .stock-info__link {
+      color: white;
+      display: flex;
+      justify-content: center;
+
+    }
+  }
+
+  .stock__gab--up {
+    color: red;
+  }
+
+  .stock__gab--down {
+    color: blue;
+  }
+}

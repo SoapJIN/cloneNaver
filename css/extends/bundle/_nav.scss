@@ -1,0 +1,20 @@
+
+
+.nav__container--float {
+  background-color: #333333;
+}
+
+.nav__list {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  overflow: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  font-weight: bold;
+
+  .nav__link {
+    color:#cccccc;
+  }
+}

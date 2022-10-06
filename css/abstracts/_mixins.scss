@@ -1,0 +1,12 @@
+
+@mixin ellipsis($line-cnt, $line-height) { //파라미터-> (라인수,라인간격)
+  overflow: hidden; //over된거 사라지게
+  text-overflow: ellipsis;
+  display: -webkit-box; //box
+  -webkit-line-clamp: $line-cnt; /* 라인수 */
+  -webkit-box-orient: vertical; //수직
+  word-wrap:break-word; //글자 넘치지 않게하기!
+  word-break: break-all;
+  line-height: $line-height; //라인 간격
+  height: $line-height * $line-cnt; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}

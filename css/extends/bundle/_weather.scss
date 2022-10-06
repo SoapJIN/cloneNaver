@@ -1,0 +1,86 @@
+.weather__container {
+  grid-area: weather;
+  margin-bottom: 1rem;
+  padding: 2rem 1.5rem;
+  background-color: white;
+  .weather {
+    &__link {
+      display: grid;
+      grid-template-columns: 40px 50% 1fr;
+      align-items: center;
+      grid-gap: 0.5rem;
+      margin-bottom: 1rem;
+      > i {
+        font-size: 3rem;
+      }
+      &--middle {
+        b {
+          font-size: 1.8rem;
+        }
+
+        > p {
+          font-size: 1.2rem;
+        }
+      }
+
+      &--right {
+        display: grid;
+        grid-template-columns: 1fr 25px;
+        align-items: center;
+        justify-items: end;
+        grid-gap: 0.5rem;
+        > p {
+          font-size: 1.5rem;
+          @include ellipsis(1,1.5em)
+        }
+      }
+    }
+
+    &-info {
+      &__list--column {
+        padding-bottom: 2rem;
+        display: flex;
+        overflow-x: scroll;
+        white-space: nowrap; //글자길이에 맞게, 줄바꿈x
+      }
+      &__link {
+        margin-right: 0.5rem;
+        border-radius: 4rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        background-color: #333333;
+        > p {
+          color:white;
+        }
+      }
+    }
+    &-chart {
+      &__link {
+        display: grid;
+        grid-template-rows: 90% 1fr;
+        grid-gap: 1rem;
+        font-size: 1.3rem;
+
+        > p {
+          padding: 1rem 0;
+        }
+      }
+      &__box--01 {
+        border: 0.1rem solid #e0e0e0;
+        border-bottom: 0.1rem solid black;
+        height: 11rem;
+      }
+      &__box--02 {
+        display: flex;
+        align-items: center;
+        > i {
+          font-size: 1.5rem;
+          margin-left: 0.3rem;
+        }
+      }
+    }
+  }
+}

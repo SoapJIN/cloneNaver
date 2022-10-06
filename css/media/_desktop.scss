@@ -1,0 +1,277 @@
+
+@include respond-above(break-993) {
+
+  .middle__container {
+    margin: 2rem auto 0;
+    display: grid;
+    position: relative;
+    grid-template-columns: 65% 35%;
+    grid-gap:25px;
+    width: $default-width;
+  }
+
+  .column--left {
+  }
+
+  .mobile-and-tablet-version {
+    display: none;
+  }
+
+  .font__title {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  .button--prev {
+    position: absolute;
+    top: 335px;
+    left: -10px;
+    z-index: 1;
+
+    &--02 {
+      position: absolute;
+      top: 534px;
+      left: -13px;
+      z-index: 1;
+    }
+
+    &--03 {
+      position: absolute;
+      bottom: 940px;
+      left: -20px;
+      z-index: 1;
+    }
+  }
+
+  .button--next {
+    position: absolute;
+    transform: translate3d(-3px);
+    top: 335px;
+    right: 388px;
+    z-index: 1;
+
+    &--02 {
+      position: absolute;
+      top: 534px;
+      right: 380px;
+      z-index: 1;
+    }
+
+    &--03 {
+      position: absolute;
+      bottom: 940px;
+      right: 400px;
+      z-index: 1;
+    }
+  }
+
+  .today__reco-writing__header {
+    margin-bottom: 1rem;
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .today__reco-writing__title {
+      display: flex;
+      gap: 0.8rem;
+
+      >span {
+        font-size: 1.2rem;
+        align-self: end;
+        color: grey;
+      }
+    }
+
+    .today__reco-writing__set {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      .info__set__button {
+        &:before {
+          content:"l";
+          margin-right: 0.5rem;
+          color: #aaaaaa;
+
+        }
+
+        > i {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+
+
+  .today__reco-writing__nav {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .today__reco-writing__list {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(10,91.810px);
+    transition: transform 0.3s ease;
+  }
+
+
+  .today__reco-writing__item {
+    border: $default-border;
+  }
+
+  .today__reco-writing__item.current {
+    background-color: $point-color;
+
+    .today__reco-writing__link {
+      color: white;
+    }
+  }
+
+  .today__reco-writing__link {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tab-content{
+    display: none;
+    padding: 15px;
+  }
+
+  .tab-content.current{
+    display: inherit;
+  }
+
+  .top-story__container {
+    padding: 2rem 0;
+    border-bottom: $default-border;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+
+  }
+
+  .top-story--left {
+    display: grid;
+    grid-template-rows: 180px 1fr;
+    font-size: 1.3rem;
+
+    > a {
+      overflow: hidden;
+
+      > img{
+        transition: all 0.2s linear;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        >img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+
+  .list--row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    font-size: 1.3rem;
+
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 1rem;
+
+    > iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+
+    .link {
+      overflow: hidden;
+      > img {
+        transition: all 0.2s linear;
+        width: 100%;
+        height: 100%;
+      }
+
+      .fa-angle-right {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        >img {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .item__texts {
+      .fa-x {
+        font-size: 1rem;
+      }
+    }
+
+    .link__img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .item__img--170 {
+    grid-template-columns: 170px 1fr;
+  }
+
+  .group__theme {
+    padding: 2rem 3rem 2rem 0;
+    border-bottom: $default-border;
+  }
+
+  .container__title {
+    margin-bottom: 1rem;
+  }
+
+  .group__nav {
+    display: flex;
+    overflow: hidden;
+  }
+
+
+  .list--colunmn {
+    display: grid;
+    grid-template-columns: repeat(4,168.6px);
+    font-size: 1.4rem;
+
+
+    .item {
+      display: grid;
+      grid-template-rows: 100px 1fr;
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  .pagination__car__list {
+    transition: transform 0.3s ease;
+
+    .link {
+        padding: 0 1.8rem;
+      > img {
+        object-position: center;
+        object-fit: contain;
+      }
+    }
+
+  }
+
+
+
+}

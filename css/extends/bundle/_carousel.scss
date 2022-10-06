@@ -1,0 +1,109 @@
+
+.carousel__container {
+  grid-area: carousel;
+  background-color: white;
+  padding: 1.5rem;
+
+  .carousel__header {
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > b {
+      font-size: 1.7rem;
+    }
+  }
+
+  .carousel__header--right {
+    .link {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      > p {
+        font-size: 1.4rem;
+        margin-right: 0.2rem;
+      }
+
+      > i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .carousel__list {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    font-size: 0;  //inline-block 공백삭제
+  }
+
+  .carousel__item {
+    display: inline-block;
+    width: 100%;
+    padding: 0 0.5rem 1rem 0.5rem;
+    scroll-snap-align: center;
+  }
+
+  .carousel__link {
+    border: 0.1rem solid #efefef;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+
+
+    > img {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .ca-01 {
+      padding: 1.5rem ;
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      align-items: center;
+      grid-gap: 1rem;
+
+      > i {
+        border: 1px solid #efefef;
+        border-radius: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .ca-01__sub {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+
+      .text--01 {
+        overflow: hidden; //over된거 사라지게
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1; /* 라인수 */
+        -webkit-box-orient: vertical; //수직
+        word-wrap:break-word; //글자 넘치지 않게하기!
+        word-break: break-all;
+        line-height: 2rem; //라인 간격
+        font-size: 1.7rem;
+      }
+
+      .text--02 {
+        overflow: hidden; //over된거 사라지게
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1; /* 라인수 */
+        -webkit-box-orient: vertical; //수직
+        word-wrap:break-word; //글자 넘치지 않게하기!
+        word-break: break-all;
+        line-height: 2rem; //라인 간격
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
