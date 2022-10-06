@@ -30,7 +30,31 @@ $(function (){
     }
     includeHtml();
 
-    
+
+    //! 밑에 더보기 누를시 리스트 더 나오게하기!
+    let $view_more_btn = $('.js--view-more--button');
+    let $group_theme = $('.group__theme');
+    console.log($group_theme);
+    console.log($('.group__theme:not(.active)'));
+    load('.group__theme','4',$view_more_btn);
+    $view_more_btn.on("click",function (){
+        load('.group__theme','4',$view_more_btn)
+    })
+
+    function load(id,cnt,bth){
+        let list = id + ":not(.active)"; //활성 안된 리스트
+        let list_length = $(list).length; //활성 안된 리스트 길이
+        let list_total_cnt; //총 활성 리스트 개수
+
+        console.log(list,list_length,list_total_cnt,"11111111");
+        if (cnt < list_length) { // 활성안된 리스트길이가 cnt보다 크면 총 활성 리스트 개수는 cnt
+            list_total_cnt = cnt;
+        } else {
+            list_total_cnt = list_length; //총 활성 리스트 개수는 활성 안된 리스트 길이
+            bth.hide()
+        }
+        $(list + ":lt(" + list_total_cnt + ")").addClass("active");
+    }
 
 
 
@@ -73,7 +97,7 @@ $(function (){
         $js_fav_container_float.toggle(0);
         $js_layout_header_nav_set.toggle(0);
     })
-
+    
     //! 더보기 버튼 누를시!
     let $empty_box = $('.js--empty--box');
 
@@ -100,7 +124,7 @@ $(function (){
         $('.nav__set__item').eq(2).css("display","");
         $('.nav__set__item').eq(3).css("display","");
 
-        //메뉴설정 눌렀을때 네모박스에 체크된거 채워지게!
+        //메뉴설정 눌렀을때 네모박스에 체크된 텍스트 채워지게!
         emptyBoxChangeText($("input[type=checkbox]:checked"));
 
         //메뉴설정 -> 접기 눌렀을때
@@ -216,7 +240,6 @@ $(function (){
         });
         console.log("====================")
     }
-
 
 
     //! 화살표버튼 누를시 carousel 무한 회전
@@ -353,8 +376,6 @@ $(function (){
             prev_button.show();
         }
     }
-
-
 
 
 
