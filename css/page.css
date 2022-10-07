@@ -287,9 +287,6 @@ button {
     display: inline;
     color: #1cb110;
   }
-  .reco-event__container .reco-event__item .reco-event__link--left {
-    grid-template-columns: 2.5rem 1fr 5rem;
-  }
   .reco-event__container .reco-event__item .reco-event__link--left .reco-event__link__texts {
     margin-right: 1rem;
     justify-items: right;
@@ -405,12 +402,12 @@ button {
   scroll-snap-align: center;
 }
 .x-scroll__container__item--news {
-  margin-top: 37px;
+  margin-top: 57px;
   font-size: 2rem;
   background-color: #1d80bc;
 }
 .x-scroll__container__item--ent {
-  margin-top: 37px;
+  margin-top: 57px;
   font-size: 2rem;
   background-color: #5b58ee;
 }

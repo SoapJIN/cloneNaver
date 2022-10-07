@@ -5,7 +5,7 @@ $(function (){
     let $js_main_x_scroll= $('.js--main--x-scroll');
     let $js_header_float = $('.js--header--float');
 
-    //! data-include-html
+    //! data-include-html--------------
     function includeHtml() {
         const includeTarget = document.querySelectorAll('.includeJs');
 
@@ -31,39 +31,58 @@ $(function (){
     includeHtml();
 
 
-    //! 밑에 더보기 누를시 리스트 더 나오게하기!
-    let $view_more_btn = $('.js--view-more--button');
-    let $group_theme = $('.group__theme');
-    console.log($group_theme);
-    console.log($('.group__theme:not(.active)'));
-    load('.group__theme','4',$view_more_btn);
-    $view_more_btn.on("click",function (){
-        load('.group__theme','4',$view_more_btn)
-    })
-
-    function load(id,cnt,bth){
-        let list = id + ":not(.active)"; //활성 안된 리스트
-        let list_length = $(list).length; //활성 안된 리스트 길이
-        let list_total_cnt; //총 활성 리스트 개수
-
-        console.log(list,list_length,list_total_cnt,"11111111");
-        if (cnt < list_length) { // 활성안된 리스트길이가 cnt보다 크면 총 활성 리스트 개수는 cnt
-            list_total_cnt = cnt;
-        } else {
-            list_total_cnt = list_length; //총 활성 리스트 개수는 활성 안된 리스트 길이
-            bth.hide()
-        }
-        $(list + ":lt(" + list_total_cnt + ")").addClass("active");
-    }
-
-
-
-    //! a태그 href="#" 누를시 스크롤이동 방지
+    //! a태그 href="#" 누를시 스크롤이동 방지------------
     $("a").on("click",function(e) {
         if ($(this).attr("href") == "#") {
             e.preventDefault();
         }
     });
+
+
+
+
+
+
+
+
+    //! 밑에 "새로운글더보기" 누를시 리스트 더 나오게하기!----------
+    let $view_more_btn = $('.js--view-more--button');
+    let page_cnt = 4;
+    //기본적으로 4개씩 불러오게 하기
+    load('.js--group--theme--car',page_cnt,$view_more_btn);
+    load('.js--group--theme--sports',page_cnt,$view_more_btn);
+
+    //"새로운글더보기" 버튼 누르면 4개씩 불러오기
+    $view_more_btn.on("click",function (){
+        //current 있는 page에 id 가져오기!
+        let page_id=$(".tab-content.current").attr("id");
+
+        //id에 맞게 더보기 cnt만큼 추가!
+        switch (page_id){
+            case "car":
+                load('.js--group--theme--car',page_cnt,$(this));
+                break;
+            case "sports":
+                load('.js--group--theme--sports',page_cnt,$(this));
+                break;
+        }
+    })
+
+
+    function load(className,cnt,bth){
+        let list = className + ":not(.active)"; //활성 안된 리스트
+        let list_length = $(list).length; //활성 안된 리스트 길이
+        let list_total_cnt; //총 활성 리스트 개수
+
+        if (cnt < list_length) { // 활성 안된 리스트길이가 cnt보다 크면 총 활성 리스트 개수는 cnt
+            list_total_cnt = cnt;
+        } else {
+            list_total_cnt = list_length; //총 활성 리스트 개수는 활성 안된 리스트 길이
+            bth.hide() //리스트 다보여주면 버튼 숨기기
+        }
+        $(list + ":lt(" + list_total_cnt + ")").addClass("active");
+    }
+
 
     //체크박스로 체크한게 페이지 새로고침해도 뜨게하기!
     liNewCreate($("input[type=checkbox]:checked"));
@@ -76,12 +95,12 @@ $(function (){
     let $js_layout_header_nav_set = $('.js--layout--header--nav--set');
     let $js_nav_set_button = $('.js--nav--set--button');
 
-    // 더보기 눌렀을때!
+    //! 더보기 눌렀을때-----------------
     $js_nav_more_button.on("click",function () {
         console.log($js_nav_more_button_txt.text());
         $('.nav__set__item').eq(2).css("display","none");
         $('.nav__set__item').eq(3).css("display","none");
-        
+
         //더보기 눌렀을때와 접기 눌렀을때 텍스트,아이콘 변경
         if($js_nav_more_button_txt.text() === "더보기"){
             $js_nav_more_button_txt.text("접기");
@@ -97,8 +116,7 @@ $(function (){
         $js_fav_container_float.toggle(0);
         $js_layout_header_nav_set.toggle(0);
     })
-    
-    //! 더보기 버튼 누를시!
+
     let $empty_box = $('.js--empty--box');
 
     //더보기 -> 메뉴설정 눌렀을때
@@ -242,7 +260,8 @@ $(function (){
     }
 
 
-    //! 화살표버튼 누를시 carousel 무한 회전
+
+    //! 화살표버튼 누를시 carousel 무한 회전--------------
     let $js_button_prev_03=$('.js--button--prev--03');
     let $js_button_next_03=$('.js--button--next--03');
     const $car_list = $('.js--car--list');
@@ -281,7 +300,7 @@ $(function (){
 
 
 
-    //! carousel 누를시 그거에 맞는 페이지 나옴!
+    //! carousel 누를시 그거에 맞는 페이지 나옴!---------------
     const today_reco_items = document.querySelectorAll('.today__reco-writing__item');
     let $js_button_prev_02=$('.js--button--prev--02');
     let $js_button_next_02=$('.js--button--next--02');
@@ -313,19 +332,22 @@ $(function (){
 
     //tab버튼 눌렀을때 current 붙이고나서 pageCheck()를 하는거지! -> buttonHideShow() 실행
     function tab_page_move (item) {
+        console.log(item);
+        let $view_more_btn = $('.js--view-more--button');
+
         let tab_id = $(item).attr('data-tab'); //누른 tab 버튼의 속성 'data-tab'에서 데이터 가져오기
 
         $('ul.today__reco-writing__list li').removeClass('current');  // 버튼 누르면 모든 li classname "current" 삭제
         $('.tab-content').removeClass('current');
 
         $(item).addClass('current'); //누른 li에 classname "current" 생성
-        $("#"+tab_id).addClass('current'); ////누른 tab버튼이랑 같은 id인 li에 "current" 생성
+        $("#"+tab_id).addClass('current'); //누른 tab버튼의 data-tab의 값이랑 tab-content에 id가 같으면 "current" 생성
 
         pageCheck();
         buttonHideShow($js_button_prev_02,$js_button_next_02,page,today_reco_items);
 
-        //page 0~6일때는 'translateX(0)', page > 7 일때는 'translateX(-183px)'
-        if(page > 7) {
+        //page 0~6일때는 'translateX(0)', page >= 7 일때는 'translateX(-183px)'
+        if(page >= 7) {
             $('ul.today__reco-writing__list').css('transform','translateX(-183px)');
         }else {
             $('ul.today__reco-writing__list').css('transform','translateX(0)');
@@ -334,9 +356,26 @@ $(function (){
 
 
 
-    //! prev,next 버튼 누르면 페이지 변경
+    //! prev,next 버튼 누르면 페이지 변경---------
     let $js_button_prev=$('.js--button--prev');
     let $js_button_next=$('.js--button--next');
+
+
+
+    function example(){
+        let current_page = 0;
+        let row_cnt= 6;
+        let column_cnt= 4;
+        let total_item_cnt = $(".news-stand__item").length;
+        let total_list_cnt =  $(".news-stand__list").length;
+        let total_page_cnt = total_item_cnt / (row_cnt * column_cnt);
+
+        let $current_page_txt = $('.js--current-page--txt').text();
+        let $total_page_txt = $('.js--total-page--txt').text();
+        console.log(total_item_cnt,total_page_cnt);
+    }
+
+    example();
 
     const $news_stand_list = $('.news-stand__list');
     let now =0; //현재 보는 페이지
@@ -344,22 +383,28 @@ $(function (){
     buttonHideShow($js_button_prev,$js_button_next,0); //0번째 일때 prev 버튼 사라지기!
 
     $js_button_next.on("click",function (){
-        console.log("$js_button_next 클릭");
-        $news_stand_list.eq(now).hide(); //버튼 누르시 현재페이지 숨기기
-        now = (now + 1 < $news_stand_list.length) ? now + 1 : now;  //next 누를때 조건문 만족시에 +1 페이지
-        $news_stand_list.eq(now).show(); //show next
-        buttonHideShow($js_button_prev,$js_button_next,now,$news_stand_list);
+        loadPage("next");
     });
 
     $js_button_prev.on("click",function (e) {
-        console.log("$js_button_prev 클릭");
-        $news_stand_list.eq(now).hide(); //버튼 누르시 현재페이지 숨기기
-        now = (now > 0) ? now - 1 : 0; //next 누를때 조건문 만족시에 -1 페이지
-        $news_stand_list.eq(now).show(); // or .css('display','block');
-        console.log($news_stand_list.length, now);
-        buttonHideShow($js_button_prev,$js_button_next,now,$news_stand_list);
+        loadPage("prev");
     });
 
+    function loadPage(type){
+        $news_stand_list.eq(now).hide(); //버튼 누르시 현재페이지 숨기기
+
+        switch (type) {
+            case "next":
+                now = (now + 1 < $news_stand_list.length) ? now + 1 : now;  //next 누를때 조건문 만족시에 +1 페이지
+                break;
+            case "prev":
+                now = (now > 0) ? now - 1 : 0; //prev 누를때 조건문 만족시에 -1 페이지
+                break;
+        }
+
+        $news_stand_list.eq(now).show(); //show next
+        buttonHideShow($js_button_prev,$js_button_next,now,$news_stand_list);
+    }
 
     //버튼 숨기고, 나타나게 하는 함수
     function buttonHideShow (prev_button,next_button,now,list) {
@@ -379,7 +424,7 @@ $(function (){
 
 
 
-    //! scroll__wrap 수평스크롤 할시에 "header-검색창" 나타남
+    //! scroll__wrap 수평스크롤 할시에 "header-검색창" 나타남----------
     $js_main_x_scroll.scroll( function () {
         reveal(this);
     });
@@ -422,7 +467,7 @@ $(function (){
     }
 
 
-    //! header에 메뉴 클릭시 메뉴창 나타남
+    //! header에 메뉴 클릭시 메뉴창 나타남-------------
     $('.js--header--menu').on("click",function (){
         $('.js--home-side--container').addClass('menu--fixed');
         $('html').css('overflow','hidden');
@@ -434,26 +479,37 @@ $(function (){
     })
 
 
+    let search_offset = $('.home__search').offset();
+    let header_search_Offset = $('.layout__header__search__container').offset();
+    let scroll_item_home = document.querySelector(".x-scroll__container__item--home");
+    let elementX = scroll_item_home.getBoundingClientRect().x;
 
-    //! 중간에서 새로고침시 "header-검색창" 고정
-    searchFloat();
+
+    //! 중간에서 새로고침시 "header-검색창" 고정----------
+    searchFloat(search_offset,elementX);
 
 
-    //! home에서 스크롤시 "header-검색창" 생성,사라짐
+    //! home에서 스크롤시 "header-검색창" 생성,사라짐-----------
     $(window).scroll(function (){
-        searchFloat();
+        searchFloat(search_offset,elementX);
+        searchFloat(header_search_Offset,0);
     })
 
-    function searchFloat() {
-        let searchOffset = $('.home__search').offset();
-        if ( $(document).scrollTop() > searchOffset.top){
+    function searchFloat(offset,x) {
+        let windowWidth = window.innerWidth;
+        let elementX = scroll_item_home.getBoundingClientRect().x;
+        // 만약 scroll이 home페이지에 있는 search보다 낮아지거나 home의 x값이 -(창너비)랑 같거나 작을때 고정됨
+        if ( $(document).scrollTop() > offset.top || x <= -windowWidth){
+            $js_header_float.css("display","unset");
             $js_header_float.addClass('header--fixed');
-        } else {
+
+        // 만약 home페이지 x값이 0이고 scroll이 search보다 높으면 클래스이름 삭제
+        } else if( x === 0 && $(document).scrollTop() < offset.top){
             $js_header_float.removeClass("header--fixed")
         }
     }
 
-    //! 폰트사이즈 설정
+    //! 폰트사이즈 설정-------------
     $js_font_size_increase.on("click", {data1:$js_font_size_decrease,size:"+1"},setFontSize);
     $js_font_size_decrease.on("click", {data1:$js_font_size_increase,size:"-1"},setFontSize);
 

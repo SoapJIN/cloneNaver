@@ -1,4 +1,6 @@
 
+
+
 .x-scroll__container {
   display: grid;
   grid-template-columns: repeat(3,100%);
@@ -15,13 +17,13 @@
   scroll-snap-align: center;
 
   &--news {
-    margin-top: 37px;
+    margin-top: $margin-top;
     font-size: 2rem;
     background-color: #1d80bc;
   }
 
   &--ent {
-    margin-top: 37px;
+    margin-top: $margin-top;
     font-size: 2rem;
     background-color: #5b58ee;
   }
